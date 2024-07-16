@@ -4,6 +4,7 @@ import {
   OAuth2Profile,
   OAuth2Strategy,
   OAuth2StrategyVerifyParams,
+  OAuth2StrategyOptions,
 } from "remix-auth-oauth2";
 
 /**
@@ -133,4 +134,11 @@ export class MicrosoftStrategy<User> extends OAuth2Strategy<
 
     return profile;
   }
+
+  public refreshToken(
+	  refreshToken: string,
+	) {
+		return super.RefreshToken(refreshToken);
+	}
 }
+
